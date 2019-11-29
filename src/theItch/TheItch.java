@@ -1,21 +1,17 @@
 package theItch;
 
-import static org.testng.Assert.assertEquals;
-
-import org.testng.annotations.BeforeClass;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 public class TheItch {
 	
-	@BeforeClass
-	private void setup() {
-		System.out.println("Setup");
+	@Test
+	private void test() {
+		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+        driver.get("http://google.com");
+        driver.close();
 	}
-	
-	@Test(priority = 1)
-	private void loginApplication() {
-		assertEquals(5, 5);
-		System.out.println("I have to test, all the time!");
-	}
-
 }
