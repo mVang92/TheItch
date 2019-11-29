@@ -11,7 +11,7 @@ public class TheItch {
 		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
-        driver.get("http://google.com");
+        driver.get("https://google.com/");
         driver.close();
 	}
 }
